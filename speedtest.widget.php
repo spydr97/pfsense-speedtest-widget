@@ -21,7 +21,7 @@
 require_once("guiconfig.inc");
 
 if ($_REQUEST['ajax']) { 
-    $results = shell_exec("speedtest --json");
+    $results = shell_exec("speedtest --format=json");
     if(($results !== null) && (json_decode($results) !== null)) {
         $config['widgets']['speedtest_result'] = $results;
         write_config("Save speedtest results");
