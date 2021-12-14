@@ -74,8 +74,8 @@ function updateResult(results) {
     	$("#speedtest-timestamp").html(new Date(results.timestamp));
         $("#speedtest-ping-jitter").html(results.ping.jitter.toFixed(4) + "<small> ms</small>");
     	$("#speedtest-ping-latency").html(results.ping.latency.toFixed(4) + "<small> ms</small>");
-    	$("#speedtest-download").html((results.download.bandwidth / 100000).toFixed(4) + "<small> Mbps</small>");
-    	$("#speedtest-upload").html((results.upload.bandwidth / 100000).toFixed(4) + "<small> Mbps</small>");
+    	$("#speedtest-download").html((results.download.bandwidth / 125000).toFixed(4) + "<small> Mbps</small>");
+    	$("#speedtest-upload").html((results.upload.bandwidth / 125000).toFixed(4) + "<small> Mbps</small>");
     	$("#speedtest-isp").html(results.isp);
     	$("#speedtest-external-ip").html(results.interface.externalIp);
     	$("#speedtest-server-name").html(results.server.name);
